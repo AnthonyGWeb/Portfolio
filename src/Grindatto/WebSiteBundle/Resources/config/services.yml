@@ -1,0 +1,4 @@
+services:
+#    grindatto_web_site.example:
+#        class: Grindatto\WebSiteBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

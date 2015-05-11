@@ -1,0 +1,4 @@
+services:
+#    grindatto_administration.example:
+#        class: Grindatto\AdministrationBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

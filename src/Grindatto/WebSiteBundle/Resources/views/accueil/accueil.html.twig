@@ -1,0 +1,87 @@
+{% extends 'Grindatto\WebSiteBundle::layout.html.twig' %}
+
+{% block title %}Grindatto Anthony Développeur back-end{% endblock %}
+
+{% block main %}
+    <section class="showing">
+        <div class="wrapper">
+            <h2>Bonjour,</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis impedit modi incidunt, voluptates illo magni autem rem hic, recusandae provident maiores sint, cumque est velit in praesentium mollitia quos dolor.</p>
+            <a href="#">Mon CV</a>
+        </div>
+    </section>
+
+    <main>
+        <section class="curently">
+            <div class="wrapper">
+                <h2>Je suis actuellement</h2>
+                <p><span>Disponible : </span> à la recherche d'un <strong>CDD/CDI...</strong></p>
+                <a href="#">Me contacter</a>
+            </div>
+        </section>
+
+        <section class="skill">
+            <div class="wrapper">
+                <h2>Mes principales compétences</h2>
+                <div>
+                    <figure>
+                        <img src="img/skill/html5.png" alt="Html5 intégration">
+                        <figcaption>HTML 5 / CSS </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/skill/php.png" alt="php developpement SQL MYSQL">
+                        <figcaption>PHP / MYSQL </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/skill/jquery.png" alt="jquery developpement javascript js">
+                        <figcaption>Javascript / JQuery </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/skill/wordpress.png" alt="wordpress developpement cms">
+                        <figcaption>Wordpress</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/skill/linux.png" alt="linux OS systeme exploitation">
+                        <figcaption>Linux (Debian, Ubuntu, Kali...)</figcaption>
+                    </figure>
+                </div>                
+                <a href="#">Plus d'informations</a>
+            </div>
+        </section>
+
+        <section class="contact-about">
+            <div class="wrapper clearfix">
+                <div id="contact" class="contact">
+                    <h2>Contact</h2>
+                    <form action="#" method="POST">
+                        <label for="email">Email :</label>
+                        <input type="email" name="email" id="email">
+
+                        <label for="objet">Objet :</label>
+                        <input type="text" name="objet" id="objet">
+
+                        <label for="message">Message :</label>
+                        <textarea name="message" id="message"></textarea>
+
+                        <input type="submit" value="Envoyer">
+                    </form>
+                </div>
+
+                <aside class="about">
+                    <h2>A propos</h2>
+                    <div class="clearfix">
+                        <img src="img/skill/linux.png" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ea sed maiores eligendi numquam mollitia cum quos, eius laudantium esse accusantium possimus est aspernatur? Architecto perspiciatis, at est quo reprehenderit!</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+{% endblock %}
+
+
+
+{% block javascripts %}{% endblock %}

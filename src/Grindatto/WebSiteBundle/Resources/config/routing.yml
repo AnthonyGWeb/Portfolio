@@ -1,0 +1,7 @@
+grindatto_web_site_homepage:
+    path:     /accueil
+    defaults: { _controller: GrindattoWebSiteBundle:Default:home }
+
+grindatto_web_site_cv:
+    path:     /curriculum
+    defaults: { _controller: GrindattoWebSiteBundle:Default:cv }

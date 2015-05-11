@@ -1,0 +1,30 @@
+{% extends 'Grindatto\WebSiteBundle::layout.html.twig' %}
+
+{% block title %}
+    Curriculum vitae Grindatto Anthony Développeur back-end
+{% endblock %}
+
+{% block main %}
+<main>
+    <section>
+    {% for formation in formations %}
+        <div class="container-bloc clearfix">
+            <div class="timeline"></div>
+            <div class="timeline-circle"></div>
+
+            <div class="container-activity">
+                <h2>{{ formation.title }}</h2>
+                {{ formation.content | raw }}
+            </div> 
+
+            <div class="container-info">
+                <h3>{{ formation.date }}</h3>
+            </div> 
+        </div>
+    {% endfor %}
+    </section>
+</main>
+{% endblock %}
+
+
+{% block javascripts %}{% endblock %}

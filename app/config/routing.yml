@@ -1,0 +1,7 @@
+grindatto_administration:
+    resource: "@GrindattoAdministrationBundle/Resources/config/routing.yml"
+    prefix:   /administration/
+
+grindatto_web_site:
+    resource: "@GrindattoWebSiteBundle/Resources/config/routing.yml"
+    prefix:   /website/

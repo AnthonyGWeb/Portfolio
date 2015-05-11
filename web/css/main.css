@@ -1,0 +1,665 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+/************************************************************
+-------------------------------------------------------------
+                            BASE
+-------------------------------------------------------------
+************************************************************/
+
+html {
+    color: #222;
+    font-size: 62.5%;
+    line-height: 1.4;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding: 0;
+    font-size: 1.4rem;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+h1, h2, figure { margin: 0; }
+h2 {  padding: 30px 0; }
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a { text-decoration: none; outline: none; }
+
+img {
+    max-width: 100%;
+}
+
+* {
+    outline: none;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/************************************************************
+-------------------------------------------------------------
+                            THEME
+-------------------------------------------------------------
+************************************************************/
+/*
+Palette de couleur :
+#1A2530 noir
+#2C3E50 bleu foncee foncee
+#34495E bleu foncee
+#E74C3C rouge
+#EAE6D8 blanc cassé
+
+#2EB398 vert
+*/
+
+strong {
+    color: #EAE6D8;
+}
+
+.background {
+    background: url(../img/intro/montagne.jpg) no-repeat;
+    background-size: cover;
+}
+
+header {
+    background: rgba(0,0,0, 0.5);
+    color: #EAE6D8;
+    font-size: 1.4rem;
+}
+
+header nav a {
+    font-size: 1.6rem;
+    color: #EAE6D8;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.showing {
+    background: rgba(0,0,0, 0.1);
+    color: #EAE6D8;
+}
+
+.showing a {
+    color: #EAE6D8;
+    border-bottom: 4px solid #E74C3C;
+    background: #34495E;
+    font-weight: bold;
+}
+
+main section {
+    background: #1A1A1A;
+    color: #7E7E7E;
+}
+
+main section h2 {
+    color: #00CBCB;
+    text-transform: uppercase;
+}
+
+main .curently p span {
+    color: #00CBCB;
+    font-weight: bold;
+}
+
+main .curently a,
+main .skill a,
+main .contact input[type="submit"] {
+    background: #000;
+    color: #EAE6D8;
+    border: none;
+    border-bottom: 4px solid #000;
+    font-weight: bold;
+}
+
+main .curently p::before,
+main .curently p::after {
+    color: #EAE6D8;
+}
+
+main .contact form input:not([type="submit"]),
+main .contact form textarea {
+    background: #000;
+    color: #00CBCB;
+    border: none;
+}
+
+footer div > a {
+    background: #00CBCB;
+}
+
+/***********************************************
+                    CV
+***********************************************/
+
+
+main .container-bloc .timeline {
+    background: #00CBCB;
+}
+
+main .container-bloc .timeline-circle {
+    background: #1A1A1A;
+    border: 3px solid #00CBCB;
+}
+
+/***
+CONTAINER ACTIVITY
+***/
+main .container-bloc:nth-child(odd) .container-activity,
+main .container-bloc:nth-child(even) .container-activity {
+    background: black;
+}
+
+main .container-bloc:nth-child(odd) .container-activity::before {
+    border-left: 10px solid black;
+}
+
+main .container-bloc:nth-child(even) .container-activity::before {
+    border-right: 10px solid black;
+}
+
+
+/************************************************************
+-------------------------------------------------------------
+                            STATE
+-------------------------------------------------------------
+************************************************************/
+header nav a:hover {
+    color: #E74C3C;
+    text-shadow: 2px 2px 4px #2C3E50;
+}
+
+.showing a:hover {
+    border-bottom: 4px solid #2EB398;
+}
+
+main .curently a:hover,
+main .skill a:hover,
+main .contact input[type="submit"]:hover {
+    background: #00CBCB;
+    color: #333;
+    border-bottom: 4px solid #EAE6D8;
+}
+
+main .skill figure:hover {
+    background: #EAE6D8;
+}
+
+footer div > a:hover {
+    background: #EAE6D8;
+}
+
+/************************************************************
+-------------------------------------------------------------
+                            STRUCTURE
+-------------------------------------------------------------
+************************************************************/
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    max-width: 1170px;
+    padding: 0 10px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -10;
+}
+
+.showing {
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer {
+    background: #000;
+    padding: 20px 0;
+}
+
+/************************************************************
+-------------------------------------------------------------
+                            MODULE
+-------------------------------------------------------------
+************************************************************/
+/********************
+        HEADER
+********************/
+header > div > div {
+    border-bottom: 2px solid rgba(0,0,0, 0.1);
+    text-align: center;
+}
+
+header nav a {
+    display: block;
+    padding: 5px 0;
+}
+
+/********************
+        SHOWING
+********************/
+.showing p {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.showing a {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 25px;
+}
+
+/********************
+        MAIN
+********************/
+main .curently p {
+    line-height: 3rem;
+    margin: 30px 0;
+    text-align: center;
+}
+
+main .curently p::before {
+    content: "{ ";
+    padding-right: 5px;
+}
+
+main .curently p::after {
+    content: "}";
+    padding-left: 5px;
+}
+
+main .curently p::before,
+main .curently p::after {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 4rem;
+    line-height: 4rem;
+    padding-bottom: 5px;
+}
+
+main .curently a, main .skill a {
+    display: block;
+    padding: 10px 0;
+    margin-top: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+main .skill > div > div {
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    -webkit-justify-content: space-around;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+main .skill figure {
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+background: #000;
+}
+
+main .skill img {
+    margin-bottom: 10px;
+    max-width: 130px;
+    max-height: 100px;
+}
+
+main .contact form input,
+main .contact form textarea {
+    display: block;
+    margin-top: 5px;
+}
+
+main .contact form input:not([type="submit"]) {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+}
+
+main .contact form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+}
+
+main .contact input[type="submit"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 0 ;
+}
+
+main .about img {
+    max-width: 100px;
+    max-height: 100px;
+    float: left;
+    padding-right: 20px;
+}
+
+main .about p {
+    margin-top: 0;
+}
+
+main .contact-about {
+    padding-bottom: 20px;
+}
+
+/***********************************************
+                    CV
+***********************************************/
+main .container-bloc h2 {
+    padding: 0;
+}
+
+main .container-bloc {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+main .container-bloc .timeline {
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    top: 0; left: 0; right: 0;
+    margin: 0 auto;
+}
+
+main .container-bloc .timeline-circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 40px; left: 0; right: 0;
+    margin: 0 auto;
+}
+
+/***
+CONTAINER ACTIVITY
+***/
+main .container-bloc:nth-child(odd) .container-activity,
+main .container-bloc:nth-child(even) .container-activity {
+    position: relative;
+    width: 45%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+main .container-bloc:nth-child(odd) .container-activity {
+    float: left;
+}
+
+main .container-bloc:nth-child(even) .container-activity {
+    float: right;
+}
+
+main .container-bloc:nth-child(odd) .container-activity::before,
+main .container-bloc:nth-child(even) .container-activity::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    top: 20px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+main .container-bloc:nth-child(odd) .container-activity::before {
+    left: 100%;
+}
+
+main .container-bloc:nth-child(even) .container-activity::before {
+    right: 100%;
+}
+
+/***
+CONTAINER INFO
+***/
+main .container-bloc:nth-child(odd) .container-info,
+main .container-bloc:nth-child(even) .container-info {
+    width: 45%;
+    box-sizing: border-box;
+}
+
+main .container-bloc:nth-child(odd) .container-info {
+    float: right;
+}
+
+main .container-bloc:nth-child(even) .container-info {
+    width: 45%;
+    text-align: right;
+}
+
+/********************
+        FOOTER
+********************/
+footer p {
+    margin: 0;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer div > a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 760px) {
+    html {
+        font-size: 0.8rem;
+    }
+
+    header nav ul {
+        text-align: right;
+    }
+
+    header nav li {
+        display: inline-block;
+        padding: 10px 20px;
+    }
+
+    main .contact,
+    main .about {
+        float: left;
+        width: 50%;
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+
+}
+
+@media only screen and (min-width: 1170px) {
+    .showing {
+        height: 50%;
+        padding: 100px 0;
+    }
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
