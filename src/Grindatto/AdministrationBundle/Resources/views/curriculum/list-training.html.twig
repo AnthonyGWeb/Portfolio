@@ -4,23 +4,40 @@
 {% block title %}Administration::Liste formation{% endblock %}
 
 {% block content %}
-	<h1>Liste des formations</h1>
-	<table>
-		<thead>
-			<tr>
-				<th>Titre</th>
-				<th>Description</th>
-				<th>Date</th>
-				<th>Ordre</th>
-				<th>Pseudo</th>
-				<th>Date de creation</th>
-				<th><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></th>
-				<th>Modifier</th>
-			</tr>
-		</thead>
-		
-		<tbody>
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<h1>Liste des formations :</h1>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Titre</th>
+						<th>Description</th>
+						<th>Date</th>
+						<th>Ordre</th>
+						<th>Visible</th>
+						<th>Pseudo</th>
+						<th>Date de creation</th>
+						<th>Modifier</th>
+						<th>Supprimer</th>
+					</tr>
+				</thead>
 				
-		</tbody>
-	</table>
+				<tbody>
+					{% for formation in formations %}
+					<tr>
+						<td>{{ formation.title | upper }}</td>
+						<td>{{ formation.content }}</td>
+						<td>{{ formation.date }}</td>
+						<td>{{ formation.ordre }}</td>
+						<td>{{ formation.visibility }}</td>
+						<td>{{ formation.pseudoId }}</td>
+						<td>{{ formation.dateCreate | date ("d-m-Y") }}</td>
+						<td><a href="{{ path("grindatto_administration_edit_training", {formationId: formation.id}) }}">éditer</a></td>
+						<td><a href="{{ path("grindatto_administration_delete_training", {formationId: formation.id}) }}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
 {% endblock %}

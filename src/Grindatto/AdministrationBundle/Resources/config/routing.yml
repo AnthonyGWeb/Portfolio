@@ -8,4 +8,16 @@ grindatto_administration_add_training:
 
 grindatto_administration_list_training:
     path:     /list-training
-    defaults: { _controller: GrindattoAdministrationBundle:Administration:addTraining }
+    defaults: { _controller: GrindattoAdministrationBundle:Administration:listTraining }
+
+grindatto_administration_delete_training:
+    path:     /delete-training/{formationId}
+    defaults: { _controller: GrindattoAdministrationBundle:Administration:deleteTraining }
+    requirements:
+        formationId: \d+
+
+grindatto_administration_edit_training:
+    path:     /edit-training/{formationId}
+    defaults: { _controller: GrindattoAdministrationBundle:Administration:editTraining }
+    requirements:
+        formationId: \d+

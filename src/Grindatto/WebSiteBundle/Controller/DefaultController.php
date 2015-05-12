@@ -16,7 +16,14 @@ class DefaultController extends Controller
     	$formationRepository = $this
     		->getDoctrine()
     		->getRepository('GrindattoWebSiteBundle:Formation');
-    	$formations = $formationRepository->findAll();
+    	$formations = $formationRepository->findBy(
+            array(
+                'visibility' => '1',
+            ),
+            array(
+                'ordre' => 'ASC',
+            )
+        );
 
         return $this->render('GrindattoWebSiteBundle:cv:cv.html.twig', array(
         	'formations' => $formations,
