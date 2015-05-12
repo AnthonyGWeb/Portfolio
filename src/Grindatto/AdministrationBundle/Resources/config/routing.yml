@@ -1,3 +1,11 @@
 grindatto_administration_homepage:
     path:     /
-    defaults: { _controller: GrindattoAdministrationBundle:Administration:index }
+    defaults: { _controller: GrindattoAdministrationBundle:Administration:home }
+
+grindatto_administration_add_training:
+    path:     /add-training
+    defaults: { _controller: GrindattoAdministrationBundle:Administration:addTraining }
+
+grindatto_administration_list_training:
+    path:     /list-training
+    defaults: { _controller: GrindattoAdministrationBundle:Administration:addTraining }

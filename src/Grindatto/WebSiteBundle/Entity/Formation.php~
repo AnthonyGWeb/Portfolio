@@ -218,27 +218,4 @@ class Formation
     {
         return $this->ordre;
     }
-
-    /**
-     * Set visibility
-     *
-     * @param boolean $visibility
-     * @return Formation
-     */
-    public function setVisibility($visibility)
-    {
-        $this->visibility = $visibility;
-
-        return $this;
-    }
-
-    /**
-     * Get visibility
-     *
-     * @return boolean 
-     */
-    public function getVisibility()
-    {
-        return $this->visibility;
-    }
 }
